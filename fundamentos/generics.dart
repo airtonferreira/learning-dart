@@ -15,5 +15,7 @@ main() {
     13.1,
   ];
 
+  print(somethings);
+
 /**Para usar qualquer tipo numa lista, vc pode passar Object ou usar o tipo var para sua variável */
 }
