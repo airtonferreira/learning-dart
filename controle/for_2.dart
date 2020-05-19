@@ -10,4 +10,17 @@ main() {
   // for (var i = 0; i < notas.length; i++) {
   //   print('Nota ${i + 1} = ${notas[i]}');
   // }
+
+  var coords = [
+    [1, 3],
+    [5, 2],
+    [7, 15],
+    [32, 12]
+  ];
+
+  for (var coord in coords) {
+    for (var ponto in coord) {
+      print('Point value is: $ponto');
+    }
+  }
 }
