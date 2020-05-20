@@ -1,3 +1,5 @@
+//Funcoes que não retornam nada.
+
 import 'dart:math';
 
 main() {
