@@ -11,7 +11,7 @@ main() {
   print(bands);
 
   Map<String, String> singlersAndAge = {
-    'Anthony Kids': '51',
+    'Anthony Kiedis': '51',
     'Kurt Cobain': '50',
     'Chester': '40',
     'Ednaldo Pereira': '48',
