@@ -4,7 +4,8 @@ main() {
     {'name': 'Chaveiro Stranger Things', 'price': 19.99},
     {'name': 'Caneca Game Of Thrones', 'price': 29.99},
     {'name': 'Camiseta DIABLO III', 'price': 99.90},
-    {'name': 'Moleton Rick And Morty', 'price': 139.90}
+    {'name': 'Moleton Rick And Morty', 'price': 139.90},
+    {'name': 'Quadro Friends', 'price': 59.90}
   ];
 
   var totalCart = products
