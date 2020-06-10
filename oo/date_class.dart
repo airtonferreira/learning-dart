@@ -2,6 +2,10 @@ class Date {
   int day;
   int month;
   int year;
+
+  String formatedDate() {
+    return '$day/$month/$year';
+  }
 }
 
 main() {
@@ -15,7 +19,12 @@ main() {
   buyDate.month = 12;
   buyDate.year = 2021;
 
-  print(
-      'Data de aniversário: ${bdayDate.day}/${bdayDate.month}/${bdayDate.year}');
-  print('Data da compra: ${buyDate.day}/${buyDate.month}/${buyDate.year}');
+  buyDate.formatedDate();
+
+  print('Data de aniversário: ${bdayDate.formatedDate()}');
+  print('Data da compra: ${buyDate.formatedDate()}');
+
+  // print(
+  //     'Data de aniversário: ${bdayDate.day}/${bdayDate.month}/${bdayDate.year}');
+  // print('Data da compra: ${buyDate.day}/${buyDate.month}/${buyDate.year}');
 }
