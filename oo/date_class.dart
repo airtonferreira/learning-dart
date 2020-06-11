@@ -16,8 +16,21 @@ class Date {
       this.month = 1,
       this.year]); // Colocando parâmetros opcionais e valores default.
 
+  Date.com(
+      {this.day = 1, this.month = 1, this.year = 1970}); // Construtor nomeado
+
+  Date.lastDayOfYear(this.year) {
+    // Outro construtor nomeado
+    day = 31;
+    month = 12;
+  }
+
   String formatedDate() {
     return '$day/$month/$year';
+  }
+
+  String toString() {
+    return formatedDate();
   }
 }
 
@@ -31,7 +44,10 @@ main() {
   print('Data de aniversário: ${bdayDate.formatedDate()}');
   print('Data da compra: ${buyDate.formatedDate()}');
 
-  // print(
-  //     'Data de aniversário: ${bdayDate.day}/${bdayDate.month}/${bdayDate.year}');
-  // print('Data da compra: ${buyDate.day}/${buyDate.month}/${buyDate.year}');
+  print(Date.com(year: 2022));
+
+  var finalDate = Date.com(day: 12, month: 7, year: 2024);
+  print(finalDate);
+
+  print(Date.lastDayOfYear(2023));
 }
