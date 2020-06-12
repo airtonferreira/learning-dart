@@ -1,30 +1,41 @@
 class Car {
-  int maxSpeed;
-  int currentSpeed = 0;
+  final int maxSpeed;
+  int _currentSpeed = 0;
 
   Car([this.maxSpeed = 100]);
 
+  int get currentSpeed {
+    return this._currentSpeed;
+  }
+
+  void set currentSpeed(int newSpeed) {
+    bool deltaValid = (_currentSpeed - newSpeed).abs() <= 5;
+    if (deltaValid && newSpeed >= 0) {
+      this._currentSpeed = newSpeed;
+    }
+  }
+
   int speedUp() {
-    if (currentSpeed + 5 >= maxSpeed) {
-      currentSpeed = maxSpeed;
+    if (_currentSpeed + 5 >= maxSpeed) {
+      _currentSpeed = maxSpeed;
     } else {
-      currentSpeed += 5;
+      _currentSpeed += 5;
     }
 
-    return currentSpeed;
+    return _currentSpeed;
   }
 
   int breakCar() {
-    if (currentSpeed + 5 <= 0) {
-      currentSpeed = 0;
+    if (_currentSpeed + 5 <= 0) {
+      _currentSpeed = 0;
     } else {
-      currentSpeed -= 5;
+      _currentSpeed -= 5;
     }
 
-    return currentSpeed;
+    return _currentSpeed;
   }
 
   bool speedLimit() {
-    return currentSpeed == maxSpeed;
+    return _currentSpeed == maxSpeed;
   }
 }
